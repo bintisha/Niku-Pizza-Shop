@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="assets/css/mat.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Niku Pizza Shop</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <div class="navbar-fixed">
+      <nav>
+        <div class="container">
+          <div class="nav-wrapper">
+            <a href="#!" class="brand-logo"
+              ><i class="fas fa-pizza-slice red-text"></i>Niku Pizza Shop</a
+            >
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"
+              ><i class="fas fa-bars"></i
+            ></a>
+            <ul class="right hide-on-med-and-down">
+              <li><a href="#about">About</a></li>
+              <li><a href="#products">Menu</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <ul class="sidenav" id="mobile-demo">
+      <li><a href="#about">About</a></li>
+      <li><a href="#products">Menu</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <div class="header p-2 ">
+      <div class="container">
+        <div class="row">
+          <div class="col s12 m6 intro">
+            <h1 class="white-text">Welcome To Niku Pizza Shop</h1>
+            <p class="grey-text">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea
+              delectus aut voluptas obcaecati ex voluptates!
+            </p>
+            <a href="#products" class="btn red">Order Now</a>
+          </div>
+          <div class="col s12 m6 img">
+            <img src="assets/img/pizza.svg" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- About -->
+    <div class="about white-text" id="about">
+      <div class="container">
+        <h3 class="center-align dis">About Us</h3>
+        <div class="row">
+          <div class="col s12 m4 center-align">
+            <div class="icon red">
+              <i class="fas fa-tachometer-alt red"></i>
+            </div>
+            <h4>Fast Delivery</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt,
+              atque?
+            </p>
+          </div>
+          <div class="col s12 m4 center-align">
+            <div class="icon red">
+              <i class="fas fa-laugh-beam red"></i>
+            </div>
+            <h4>Happy Costumer</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt,
+              atque?
+            </p>
+          </div>
+          <div class="col s12 m4 center-align">
+            <div class="icon red">
+              <i class="fas fa-money-bill-alt red"></i>
+            </div>
+            <h4>Good Prizes</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt,
+              atque?
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Products -->
+    <div id="products">
+      <div class="container">
+        <h3 class="center-align dis">Product</h3>
+        <div class="row" id="wrapper"></div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="page-footer" id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col s12 m6">
+            <h4>Location</h4>
+            <p>27 South Water Street</p>
+            <p>Newburgh, NY 12550</p>
+            <p>Phone: <a href="">845-565-(SHOP) 7467</a></p>
+          </div>
+          <div class="col s12 m6">
+            <h4>Contact</h4>
+            <form action="">
+              <div class="input-field col s6">
+                <input id="name" type="text" class="validate" />
+                <label for="name">First Name</label>
+              </div>
+              <div class="input-field col s6">
+                <input id="email" type="text" class="validate" />
+                <label for="email">Email</label>
+              </div>
+              <div class="input-field col s12">
+                <textarea
+                  id="textarea1"
+                  class="materialize-textarea"
+                ></textarea>
+                <label for="textarea1">Subject</label>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+          © 2019 Copyright Kreshnik Bardhi
+        </div>
+      </div>
+    </footer>
+
+    <a
+      class="waves-effect waves-light btn modal-trigger red"
+      href="#modal1"
+      id="cart"
+      ><i class="fas fa-shopping-cart"></i
+    ></a>
+
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <h4>Cart</h4>
+        <div class="wrap">
+          <table class="striped">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Quantity</th>
+                <th>Item Price</th>
+                <th>Remove</th>
+              </tr>
+            </thead>
+
+            <tbody id="table"></tbody>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>
+                <div class="btn waves-effect waves-ligh green">
+                  $<span id="total">0</span>
+                </div>
+              </td>
+            </tr>
+          </table>
+
+          <div class="checkout">
+            <form action="">
+              <div class="row">
+                <div class="input-field col s6">
+                  <input id="presonname" type="text" class="validate" />
+                  <label for="presonname">First Name</label>
+                </div>
+                <div class="input-field col s6">
+                  <input id="presonnumber" type="number" class="validate" />
+                  <label for="presonnumber">Phone</label>
+                </div>
+                <div class="input-field col s12">
+                  <textarea
+                    id="presontextarea1"
+                    class="materialize-textarea"
+                  ></textarea>
+                  <label for="presontextarea1">Address</label>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="waves-effect waves-green btn red back">Back</a>
+        <a href="#!" class="waves-effect waves-green btn green next">Next</a>
+      </div>
+    </div>
+
+    <script src="assets/js/mat.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
